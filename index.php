@@ -282,7 +282,7 @@ require_once 'header.php';
             
             <!-- Highlight 3: Garden -->
             <div class="highlight-card">
-                <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=800&q=80" alt="Tropical Lush Gardens" class="highlight-card-img">
+                <img src="img/garden.png" alt="Tropical Lush Gardens" class="highlight-card-img">
                 <div class="highlight-card-overlay">
                     <h3 class="highlight-card-title">Tropical Gardens</h3>
                     <p class="highlight-card-desc">Stroll along our lush manicured lawns lined with towering coconut palms, offering a peaceful atmosphere.</p>
