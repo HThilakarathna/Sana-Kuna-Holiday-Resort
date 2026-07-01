@@ -118,56 +118,47 @@ require_once 'header.php';
         </div>
     </div>
 
-    <!-- Slide Dots -->
-    <div class="hero-v2-dots" id="hero-v2-dots"></div>
-
-    <!-- Scroll-down indicator -->
-    <a href="#about-resort" class="hero-scroll-indicator" aria-label="Scroll down">
-        <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
-        <span class="scroll-label">Scroll</span>
-    </a>
-</section>
-
-<!-- Quick Booking Bar (below hero, not overlapping) -->
-<div class="booking-bar-standalone" id="quick-booking-bar">
-    <div class="container">
-        <form action="book.php" method="GET" class="booking-form-v2">
-            <div class="bfv2-group">
-                <label for="check-in-date"><i class="fas fa-calendar-check"></i> Check-In</label>
-                <input type="date" id="check-in-date" name="checkin" required min="<?php echo date('Y-m-d'); ?>">
-            </div>
-            <div class="bfv2-sep"></div>
-            <div class="bfv2-group">
-                <label for="check-out-date"><i class="fas fa-calendar-times"></i> Check-Out</label>
-                <input type="date" id="check-out-date" name="checkout" required min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>">
-            </div>
-            <div class="bfv2-sep"></div>
-            <div class="bfv2-group">
-                <label for="guest-count"><i class="fas fa-users"></i> Guests</label>
-                <select id="guest-count" name="guests" required>
-                    <option value="1">1 Guest</option>
-                    <option value="2" selected>2 Guests</option>
-                    <option value="3">3 Guests</option>
-                    <option value="4">4 Guests</option>
-                    <option value="5+">5+ Guests</option>
-                </select>
-            </div>
-            <div class="bfv2-sep"></div>
-            <div class="bfv2-group">
-                <label for="room-select"><i class="fas fa-bed"></i> Room Type</label>
-                <select id="room-select" name="room_type">
-                    <option value="any">Any Category</option>
-                    <?php foreach($rooms as $key => $r): ?>
-                        <option value="<?php echo $key; ?>"><?php echo $r['name']; ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <button type="submit" class="bfv2-submit">
-                <i class="fas fa-search"></i> Check Availability
-            </button>
-        </form>
+    <!-- Quick Booking Bar (floating inside hero at the bottom) -->
+    <div class="booking-bar-floating" id="quick-booking-bar">
+        <div class="container">
+            <form action="book.php" method="GET" class="booking-form-v2">
+                <div class="bfv2-group">
+                    <label for="check-in-date"><i class="fas fa-calendar-check"></i> Check-In</label>
+                    <input type="date" id="check-in-date" name="checkin" required min="<?php echo date('Y-m-d'); ?>">
+                </div>
+                <div class="bfv2-sep"></div>
+                <div class="bfv2-group">
+                    <label for="check-out-date"><i class="fas fa-calendar-times"></i> Check-Out</label>
+                    <input type="date" id="check-out-date" name="checkout" required min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>">
+                </div>
+                <div class="bfv2-sep"></div>
+                <div class="bfv2-group">
+                    <label for="guest-count"><i class="fas fa-users"></i> Guests</label>
+                    <select id="guest-count" name="guests" required>
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5+">5+ Guests</option>
+                    </select>
+                </div>
+                <div class="bfv2-sep"></div>
+                <div class="bfv2-group">
+                    <label for="room-select"><i class="fas fa-bed"></i> Room Type</label>
+                    <select id="room-select" name="room_type">
+                        <option value="any">Any Category</option>
+                        <?php foreach($rooms as $key => $r): ?>
+                            <option value="<?php echo $key; ?>"><?php echo $r['name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <button type="submit" class="bfv2-submit">
+                    <i class="fas fa-search"></i> Check Availability
+                </button>
+            </form>
+        </div>
     </div>
-</div>
+</section>
 
 <!-- About Us Section -->
 <section class="py-section" id="about-resort">

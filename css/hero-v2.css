@@ -55,7 +55,7 @@
     z-index: 5;
     width: 100%;
     padding-top: 145px;
-    padding-bottom: 80px;
+    padding-bottom: 125px;
 }
 
 .hero-v2-container {
@@ -335,7 +335,7 @@
 /* ---- Slide Dots ---- */
 .hero-v2-dots {
     position: absolute;
-    bottom: 88px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -363,7 +363,7 @@
 /* ---- Scroll indicator ---- */
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 28px;
+    bottom: 135px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -415,10 +415,18 @@
 
 
 /* ==========================================================================
-   16. STANDALONE BOOKING BAR (below hero)
+   16. FLOATING BOOKING BAR (inside hero at the bottom)
    ========================================================================== */
-.booking-bar-standalone {
-    background-color: var(--color-primary);
+.booking-bar-floating {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background: rgba(61, 31, 8, 0.95); /* Mahogany translucent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(196, 135, 58, 0.25);
     border-bottom: 3px solid var(--color-gold);
 }
 
