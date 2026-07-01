@@ -29,9 +29,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Main Stylesheet with cache busting -->
-    <link rel="stylesheet" href="css/style.css?v=1.0.4">
+    <link rel="stylesheet" href="css/style.css?v=1.0.5">
     <!-- Hero V2 & Booking Bar Styles with cache busting -->
-    <link rel="stylesheet" href="css/hero-v2.css?v=1.0.4">
+    <link rel="stylesheet" href="css/hero-v2.css?v=1.0.5">
 </head>
 <body>
 
